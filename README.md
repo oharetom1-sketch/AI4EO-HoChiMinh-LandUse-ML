@@ -27,3 +27,16 @@ Ho Chi Minh City and Can Gio, southern Vietnam.
 - `/figures` Outputs and maps
 - `/data` Data instructions
 - `/src` Python helper scripts
+
+## Preliminary Observations
+
+Initial Sentinel-2 imagery suggests continued urban densification around Ho Chi Minh City between the selected dates, while the Can Gio mangrove region remains a major vegetated coastal zone requiring monitoring.
+
+## Selected Imagery
+
+Two Sentinel-2 Level-2A images were selected for temporal comparison:
+
+- January 2018 (baseline)
+- March 2026 (recent comparison)
+
+These dates were chosen because both occur during the dry season, reducing seasonal bias caused by monsoon rainfall, vegetation stress and cloud contamination.
