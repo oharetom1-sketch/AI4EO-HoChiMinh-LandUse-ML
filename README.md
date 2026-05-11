@@ -141,7 +141,7 @@ This ensured that land-cover classes remained consistent between years and produ
 
 # Land-Cover Change Detection
 
-![ChangeMap](figures/rf_change_map.png)
+![ChangeMap](figures/Land_Cover_Change.png)
 
 The Random Forest-based change map suggests that most land-cover classes remained relatively stable between 2018 and 2026.
 
