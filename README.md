@@ -214,6 +214,16 @@ Future work could incorporate:
 
 ---
 
+# Key Findings
+
+- Random Forest classification produced more stable results than independently trained K-means models
+- Water and vegetation remained broadly stable between 2018 and 2026
+- Large-scale urban expansion was not strongly detected within the analysed imagery
+- The NIR band was the most important feature in land-cover classification
+- The project demonstrates the usefulness of machine learning for satellite-based environmental monitoring
+
+---
+
 # Conclusion
 
 This project demonstrates how Sentinel-2 imagery and machine-learning techniques can be used to investigate land-cover classification and environmental change around Ho Chi Minh City.
