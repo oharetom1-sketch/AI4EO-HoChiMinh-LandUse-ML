@@ -27,6 +27,8 @@ The workflow combines spectral index analysis with both unsupervised and supervi
 
 The analysis was performed using Python in Google Colab with Sentinel-2 Level-2A imagery acquired from the Copernicus Dataspace ecosystem.
 
+![Methodology](figures/Methodology.png)
+
 ---
 
 # Background and Motivation
