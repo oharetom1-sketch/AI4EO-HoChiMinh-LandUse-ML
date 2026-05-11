@@ -1,5 +1,24 @@
 # Machine Learning Detection of Urban Expansion and Vegetation Change Around Ho Chi Minh City Using Sentinel-2
 
+---
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Background and Motivation](#background-and-motivation)
+- [Research Question](#research-question)
+- [Methodology](#methodology)
+- [Study Area and Data Acquisition](#study-area-and-data-acquisition)
+- [RGB Visualisation](#rgb-visualisation)
+- [Spectral Indices](#spectral-indices)
+- [K-means Classification](#k-means-classification)
+- [Random Forest Classification](#random-forest-classification)
+- [Land-Cover Change Detection](#land-cover-change-detection)
+- [Explainable AI: Feature Importance](#explainable-ai-feature-importance)
+- [Environmental Cost of the Project](#environmental-cost-of-the-project)
+- [Limitations](#limitations)
+- [Conclusion](#conclusion)
+
+---
 ## Project Overview
 
 This project applies remote sensing and machine-learning techniques to Sentinel-2 satellite imagery to classify land cover and investigate environmental change around Ho Chi Minh City, Vietnam, between 2018 and 2026.
