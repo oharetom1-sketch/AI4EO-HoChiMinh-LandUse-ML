@@ -17,6 +17,7 @@
 - [Environmental Cost of the Project](#environmental-cost-of-the-project)
 - [Limitations](#limitations)
 - [Conclusion](#conclusion)
+- [References](#references)
 
 ---
 ## Project Overview
@@ -108,7 +109,7 @@ RGB imagery was used to visually assess land-cover patterns, river systems, vege
 
 ![NDVI2026](figures/ndvi_2026.png)
 
-The Normalised Difference Vegetation Index (NDVI) was used to identify vegetated regions and assess vegetation stability between years.
+The Normalised Difference Vegetation Index (NDVI) is widely used to assess vegetation health and density using red and near-infrared wavelengths (Rouse et al., 1974).The Normalised Difference Vegetation Index (NDVI) was used to identify vegetated regions and assess vegetation stability between years.
 
 ## NDWI 2018
 
@@ -118,7 +119,7 @@ The Normalised Difference Vegetation Index (NDVI) was used to identify vegetated
 
 ![NDWI2026](figures/ndwi_2026.png)
 
-The Normalised Difference Water Index (NDWI) was used to highlight rivers, estuaries, and coastal water bodies.
+The Normalised Difference Water Index (NDWI) highlights water bodies using spectral differences between vegetation and water surfaces (Xu, 2006). The Normalised Difference Water Index (NDWI) was used to highlight rivers, estuaries, and coastal water bodies.
 
 ---
 
@@ -146,6 +147,8 @@ Initial change detection using independently trained K-means models produced inc
 ---
 
 # Random Forest Classification
+
+The Random Forest classifier was implemented using the Scikit-learn machine-learning library (Pedregosa et al., 2011).
 
 ## 2018 Random Forest Classification
 
@@ -191,7 +194,7 @@ The Near-Infrared (NIR) band was identified as the most important feature. This 
 
 # Environmental Cost of the Project
 
-Machine-learning and remote sensing workflows require computational processing that consumes electricity and therefore contributes indirectly to carbon emissions. Although this project used relatively lightweight machine-learning methods, computational efficiency still became an important consideration due to the large size of Sentinel-2 imagery.
+Machine-learning and remote sensing workflows require computational processing that consumes electricity and therefore contributes indirectly to carbon emissions. Although this project used relatively lightweight machine-learning methods, computational efficiency still became an important consideration due to the large size of Sentinel-2 imagery. The increasing computational demand of machine-learning workflows has become an important consideration within Earth observation research (Chuvieco, 2020).
 
 The original Sentinel-2 raster datasets used in this workflow had image dimensions of approximately 10,980 × 10,980 pixels. Processing imagery of this scale within Google Colab resulted in several memory limitations during early stages of analysis, particularly during RGB visualisation and clustering operations.
 
@@ -250,15 +253,9 @@ Chuvieco, E., 2020. Fundamentals of Satellite Remote Sensing: An Environmental A
 
 Drusch, M., Del Bello, U., Carlier, S., Colin, O., Fernandez, V., Gascon, F., Hoersch, B., Isola, C., Laberinti, P., Martimort, P. and Meygret, A., 2012. Sentinel-2: ESA’s optical high-resolution mission for GMES operational services. Remote Sensing of Environment, 120, pp.25–36.
 
-ESA, 2024. Sentinel-2 User Handbook. European Space Agency.
-
-Jensen, J.R., 2015. Introductory Digital Image Processing: A Remote Sensing Perspective. 4th ed. Pearson.
-
 Lillesand, T., Kiefer, R.W. and Chipman, J., 2015. Remote Sensing and Image Interpretation. 7th ed. Wiley.
 
 Pedregosa, F. et al., 2011. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12, pp.2825–2830.
-
-Richards, J.A. and Jia, X., 2006. Remote Sensing Digital Image Analysis. 4th ed. Springer.
 
 Rouse, J.W., Haas, R.H., Schell, J.A. and Deering, D.W., 1974. Monitoring vegetation systems in the Great Plains with ERTS. NASA Special Publication, 351, pp.309–317.
 
