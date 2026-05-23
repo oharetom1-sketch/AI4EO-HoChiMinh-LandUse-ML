@@ -37,7 +37,7 @@ Ho Chi Minh City is one of the fastest growing urban regions in Southeast Asia. 
 
 Mangroves are environmentally significant ecosystems that provide coastal protection, biodiversity support, carbon storage, and sediment stabilisation. Monitoring changes in these environments is therefore important for both environmental management and urban planning.
 
-Traditional field-based environmental monitoring can be time-consuming, expensive, and difficult across large or inaccessible regions. Satellite remote sensing provides a scalable alternative that enables large areas to be analysed efficiently over time.
+Traditional field-based environmental monitoring can be time-consuming, expensive, and difficult across large or inaccessible regions. Satellite remote sensing provides a scalable alternative that enables large areas to be analysed efficiently over time(Lillesand, Kiefer and Chipman, 2015). 
 
 This project explores how machine-learning techniques can be combined with Sentinel-2 imagery to investigate land-cover change using freely available Earth observation data.
 
@@ -74,6 +74,7 @@ The study area focuses on Ho Chi Minh City and the surrounding coastal region of
 - Mangrove vegetation
 - Sediment-rich coastal environments
 
+Sentinel-2 is a multispectral Earth observation mission operated by the European Space Agency (Drusch et al., 2012).
 Sentinel-2 Level-2A imagery was acquired for:
 
 - February 2018
@@ -190,10 +191,17 @@ The Near-Infrared (NIR) band was identified as the most important feature. This 
 
 # Environmental Cost of the Project
 
-Machine-learning and remote sensing workflows require computational processing that consumes energy and contributes to carbon emissions. This project used Google Colab cloud computing and downsampled imagery to reduce computational demand and memory usage.
+Machine-learning and remote sensing workflows require computational processing that consumes electricity and therefore contributes indirectly to carbon emissions. Although this project used relatively lightweight machine-learning methods, computational efficiency still became an important consideration due to the large size of Sentinel-2 imagery.
 
-Despite this computational footprint, satellite-based environmental monitoring provides substantial environmental advantages compared to traditional field surveys. Remote sensing enables large regions to be monitored efficiently without extensive travel, vehicle use, or field logistics.
+The original Sentinel-2 raster datasets used in this workflow had image dimensions of approximately 10,980 × 10,980 pixels. Processing imagery of this scale within Google Colab resulted in several memory limitations during early stages of analysis, particularly during RGB visualisation and clustering operations.
 
+To reduce computational demand and improve workflow efficiency, image downsampling was introduced prior to classification. This significantly reduced RAM usage and processing time while maintaining sufficient spatial detail for land-cover analysis.
+
+The project primarily used K-means clustering and Random Forest classification, which are relatively computationally efficient machine-learning approaches compared to deep-learning methods such as convolutional neural networks (CNNs) or Vision Transformers. Total active processing time for the workflow was estimated to remain within approximately 1–2 hours of cloud-based CPU computation.
+
+Despite the computational cost associated with cloud processing and large raster datasets, satellite remote sensing still provides substantial environmental advantages compared to traditional field-based monitoring approaches. Large regions can be monitored repeatedly without requiring extensive travel, transport, or logistical support, allowing environmental change to be assessed at regional scales with comparatively low resource demand.
+
+This project therefore highlights the balance between computational cost and the environmental advantages of scalable Earth observation workflows.
 ---
 
 # Limitations
@@ -218,11 +226,11 @@ Future work could incorporate:
 
 # Key Findings
 
-- Random Forest classification produced more stable results than independently trained K-means models
+- K-means clustering provided a useful exploratory baseline but produced inconsistent temporal classifications
+- Random Forest classification improved classification consistency between years
 - Water and vegetation remained broadly stable between 2018 and 2026
-- Large-scale urban expansion was not strongly detected within the analysed imagery
-- The NIR band was the most important feature in land-cover classification
-- The project demonstrates the usefulness of machine learning for satellite-based environmental monitoring
+- The Near-Infrared band contributed most strongly to classification performance
+- Subtle temporal changes highlighted the challenges of environmental change detection using limited spectral inputs
 
 ---
 
@@ -233,3 +241,25 @@ This project demonstrates how Sentinel-2 imagery and machine-learning techniques
 While K-means clustering provided a useful exploratory baseline, Random Forest classification produced more stable and interpretable results for temporal comparison. The workflow highlights both the potential and limitations of machine-learning approaches in environmental remote sensing applications.
 
 Overall, the project demonstrates how AI and Earth observation data can support scalable environmental monitoring using freely available satellite imagery.
+
+---
+
+# References
+
+Chuvieco, E., 2020. Fundamentals of Satellite Remote Sensing: An Environmental Approach. 3rd ed. Boca Raton: CRC Press.
+
+Drusch, M., Del Bello, U., Carlier, S., Colin, O., Fernandez, V., Gascon, F., Hoersch, B., Isola, C., Laberinti, P., Martimort, P. and Meygret, A., 2012. Sentinel-2: ESA’s optical high-resolution mission for GMES operational services. Remote Sensing of Environment, 120, pp.25–36.
+
+ESA, 2024. Sentinel-2 User Handbook. European Space Agency.
+
+Jensen, J.R., 2015. Introductory Digital Image Processing: A Remote Sensing Perspective. 4th ed. Pearson.
+
+Lillesand, T., Kiefer, R.W. and Chipman, J., 2015. Remote Sensing and Image Interpretation. 7th ed. Wiley.
+
+Pedregosa, F. et al., 2011. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12, pp.2825–2830.
+
+Richards, J.A. and Jia, X., 2006. Remote Sensing Digital Image Analysis. 4th ed. Springer.
+
+Rouse, J.W., Haas, R.H., Schell, J.A. and Deering, D.W., 1974. Monitoring vegetation systems in the Great Plains with ERTS. NASA Special Publication, 351, pp.309–317.
+
+Xu, H., 2006. Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery. International Journal of Remote Sensing, 27(14), pp.3025–3033.
