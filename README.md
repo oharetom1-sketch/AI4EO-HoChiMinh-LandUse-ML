@@ -18,6 +18,8 @@
 - [Limitations](#limitations)
 - [Conclusion](#conclusion)
 - [References](#references)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
 ---
 ## Project Overview
@@ -260,3 +262,15 @@ Pedregosa, F. et al., 2011. Scikit-learn: Machine Learning in Python. Journal of
 Rouse, J.W., Haas, R.H., Schell, J.A. and Deering, D.W., 1974. Monitoring vegetation systems in the Great Plains with ERTS. NASA Special Publication, 351, pp.309–317.
 
 Xu, H., 2006. Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery. International Journal of Remote Sensing, 27(14), pp.3025–3033.
+
+---
+## Contact
+
+**Author**: Tom O'Hare 
+**Email**: ucfbtoh@ucl.ac.uk 
+**Institution**: University College London  
+**Course**: GEOL0069 - AI for Earth Observation  
+
+## Acknowledgments
+
+This project was created for GEOL0069 at University College London, taught by Dr. Michel Tsamados and Weibin Chen.
